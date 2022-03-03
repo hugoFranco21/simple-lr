@@ -54,7 +54,7 @@ def validateJson(jsonData, schema):
         return False
     return True
 
-def get_rookie_prediction(input):
+def main(request):
     """This function receives the data from the requests, parses it as a dictionary and gets the prediction
     Args:
         input (json) The request body
