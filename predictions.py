@@ -67,8 +67,7 @@ def get_prediction(input):
     if not (validateJson(data, script_schema_1)):
         return -1
     data = json.loads(input)
-    data = data.items()
-    input_data = [data[0], data[1], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    input_data = [data['performance'], data['seniority'], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     if data[2] == 'Female':
         input_data[2] = 1
     else:

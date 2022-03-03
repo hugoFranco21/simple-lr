@@ -111,6 +111,7 @@ env.bak/
 venv.bak/
 output/script3.txt
 assets/error2.png
+predcli.py
 
 # Spyder project settings
 .spyderproject
