@@ -68,41 +68,41 @@ def get_prediction(input):
         return -1
     data = json.loads(input)
     input_data = [data['performance'], data['seniority'], 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    if data[2] == 'Female':
+    if data['gender'] == 'Female':
         input_data[2] = 1
     else:
         input_data[3] = 1
     
-    if data[3] == 'High School':
+    if data['education'] == 'High School':
         input_data[4] = 1
-    elif data[3] == 'College':
+    elif data['education'] == 'College':
         input_data[5] = 1
-    elif data[3] == 'Masters':
+    elif data['education'] == 'Masters':
         input_data[6] = 1
-    elif data[3] == 'PhD':
+    elif data['education'] == 'PhD':
         input_data[7] = 1
         
-    if data[4] == 'Data Scientist':
+    if data['job'] == 'Data Scientist':
         input_data[8] = 1
-    elif data[4] == 'Driver':
+    elif data['job'] == 'Driver':
         input_data[9] = 1
-    elif data[4] == 'Financial Analyst':
+    elif data['job'] == 'Financial Analyst':
         input_data[10] = 1
-    elif data[4] == 'Graphic Designer':
+    elif data['job'] == 'Graphic Designer':
         input_data[11] = 1
-    elif data[4] == 'IT':
+    elif data['job'] == 'IT':
         input_data[12] = 1
-    elif data[4] == 'Manager':
+    elif data['job'] == 'Manager':
         input_data[13] = 1
-    elif data[4] == 'Marketing Associate':
+    elif data['job'] == 'Marketing Associate':
         input_data[14] = 1
-    elif data[4] == 'Sales Associate':
+    elif data['job'] == 'Sales Associate':
         input_data[15] = 1
-    elif data[4] == 'Software Engineer':
+    elif data['job'] == 'Software Engineer':
         input_data[16] = 1
-    elif data[4] == 'Warehouse Associate':
+    elif data['job'] == 'Warehouse Associate':
         input_data[17] = 1
-    an_array = np.array(list(input_data.values()))
+    an_array = np.array(input_data)
     if not validate_input(an_array):
         return -1
     norm = min_max_scaler.transform([an_array])
