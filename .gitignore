@@ -109,6 +109,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+output/script3.txt
+assets/error2.png
 
 # Spyder project settings
 .spyderproject
